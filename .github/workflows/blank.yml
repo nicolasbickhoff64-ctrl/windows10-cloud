@@ -35,8 +35,6 @@ jobs:
       - name: Criando um Usuário
         run: |
           sudo useradd nicolas
-          sudo groupadd nicolas
-          sudo usermod -a -G nicolas nicolas
           sudo echo "nicolas:123456" | sudo chpasswd
           sudo usermod -a -G sudo nicolas
           
