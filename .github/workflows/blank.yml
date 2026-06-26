@@ -34,7 +34,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Criando um Usuário
         run: |
-          sudo useradd nicolas
+          sudo useradd -m -s /bin/bash nicolas
           sudo echo "nicolas:123456" | sudo chpasswd
           sudo usermod -a -G sudo nicolas
           
