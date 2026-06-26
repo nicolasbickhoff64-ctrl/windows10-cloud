@@ -40,6 +40,6 @@ jobs:
           
       - name: Iniciando SSH + Túnel + Sleep
         run: |
-          sshd &
-          ssh -p 443 -R0:127.0.0.1:22 qr+tcp@free.pinggy.io
+          /usr/bin/sshd &
+          ssh -o StrictHostKeyChecking=no -p 443 -R0:127.0.0.1:22 qr+tcp@free.pinggy.io
           sleep 25200
